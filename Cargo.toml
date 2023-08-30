@@ -1,0 +1,24 @@
+[package]
+name = "indexdb-es"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+async-trait = "0.1.73"
+cqrs-es = "0.4.9"
+futures = "0.3.28"
+getrandom = { version = "0.2", features = ["js"] }
+idb = "0.4"
+serde = "1.0.183"
+serde_json = "1.0.104"
+serde-wasm-bindgen = "0.5.0"
+wasm-bindgen = "0.2.87"
+wasm-bindgen-futures = "0.4.37"
+anyhow = "1.0.75"
+
+[dev-dependencies]
+tokio = { version = "1", features = ["rt"] }
+uuid = { version = "1.4", features = ["v4"]}
+wasm-bindgen-test = "0.3.0"
