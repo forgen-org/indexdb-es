@@ -28,14 +28,14 @@ use cqrs_es::{Aggregate, CqrsFramework, Query};
 
 // /// A convenience function for creating a CqrsFramework from a database connection pool
 // /// and queries.
-pub fn index_cqrs<A>(
+pub fn indexdb_cqrs<A>(
     query_processor: Vec<Box<dyn Query<A>>>,
     services: A::Services,
 ) -> IndexDbCqrs<A>
 where
     A: Aggregate,
 {
-    let repo = IndexDbEventRepository::new();
+    let repo = IndexDbEventRepository::new(None, None);
     let store = PersistedEventStore::new_event_store(repo);
     CqrsFramework::new(store, query_processor, services)
 }

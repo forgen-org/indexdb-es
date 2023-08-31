@@ -7,16 +7,18 @@ edition = "2021"
 
 [dependencies]
 async-trait = "0.1.73"
+console_error_panic_hook = "0.1.7"
 cqrs-es = "0.4.9"
 futures = "0.3.28"
 getrandom = { version = "0.2", features = ["js"] }
+gloo-utils = { version = "0.1", features = ["serde"] }
 idb = "0.4"
 serde = "1.0.183"
 serde_json = "1.0.104"
 serde-wasm-bindgen = "0.5.0"
 wasm-bindgen = "0.2.87"
 wasm-bindgen-futures = "0.4.37"
-anyhow = "1.0.75"
+web-sys = { version = "0.3.64", features = ["console"] }
 
 [dev-dependencies]
 tokio = { version = "1", features = ["rt"] }

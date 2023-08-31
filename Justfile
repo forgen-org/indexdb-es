@@ -10,6 +10,11 @@ test-chrome:
     @echo 'Testing...'
     wasm-pack test --chrome
 
+# Runs browser tests for `idb` using chrome and watch for changes
+test-chrome-watch:
+    @echo 'Testing...'
+    cargo watch -- wasm-pack test --chrome
+
 # Runs browser tests for `idb` using chrome (intended for use in CI)
 test-chrome-headless:
     @echo 'Testing...'
